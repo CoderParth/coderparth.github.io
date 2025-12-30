@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "An intro to Relational database and SQL"
+title:  "An Intro to Relational Database and SQL"
 date:   2025-12-29
 ---
 

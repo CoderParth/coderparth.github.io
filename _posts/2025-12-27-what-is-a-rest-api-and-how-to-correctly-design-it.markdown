@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is a REST API, and how to design it correctly?"
+title:  "What Is a REST API and How to Design It Correctly"
 date:   2025-12-27 
 ---
 
