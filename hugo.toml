@@ -12,10 +12,6 @@ theme = 'PaperMod'
   ShowCodeCopyButtons = true
   defaultTheme = "auto"
 
-  [params.homeInfoParams]
-    Title = "Hey, I'm Parth 👋"
-    Content = "Writing about backend, internet, systems, and whatever I'm learning right now."
-
 [[menu.main]]
     identifier = "Github"
     name = "Github"
