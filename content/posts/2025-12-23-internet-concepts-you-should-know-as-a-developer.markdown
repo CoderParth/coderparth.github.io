@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Internet Concepts You Should Know as a Developer"
-date:   2025-12-23 20:47:01 +1100
+date: 2025-12-23 20:47:01 +1100
 ---
 
 ## How does the internet work?

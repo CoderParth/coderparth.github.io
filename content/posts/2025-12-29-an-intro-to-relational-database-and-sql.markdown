@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "An Intro to Relational Database and SQL"
-date:   2025-12-29
+date: 2025-12-29
 ---
 
 **What is a relational database?**  

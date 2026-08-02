@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What Is a REST API and How to Design It Correctly"
-date:   2025-12-27 
+date: 2025-12-27 
 ---
 
 **NOTE**: The goal of this blog post is to explain REST API in easy to understand words, like a student’s notes, without diving too deep.

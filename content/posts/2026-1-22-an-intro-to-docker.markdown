@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "An Intro to Docker"
-date:   2026-1-22
+date: 2026-01-22
 ---
 
 

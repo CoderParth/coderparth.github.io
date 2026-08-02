@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Different Types of Tests and their Implementation Example in Go"
-date:   2026-1-2
+date: 2026-01-02
 ---
 
 **NOTE:** The aim of this post is to explain common types of tests in the simplest and easiest words, without diving too deep. 

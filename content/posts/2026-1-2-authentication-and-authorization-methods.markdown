@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Authentication and Authorization Methods"
-date:   2026-1-2
+date: 2026-01-02
 ---
 
 

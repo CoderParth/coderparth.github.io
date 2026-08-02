@@ -1,0 +1,23 @@
+baseURL = 'https://coderparth.github.io/'
+languageCode = 'en-us'
+title = 'Parth Sigdel'
+theme = 'PaperMod'
+
+[params]
+  description = "Notes on backend dev, Go, and things I'm learning"
+  disableSpecial1stPost = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  defaultTheme = "auto"
+
+  [params.homeInfoParams]
+    Title = "Hey, I'm Parth 👋"
+    Content = "Writing about backend, internet, systems, and whatever I'm learning right now."
+
+[[menu.main]]
+    identifier = "Github"
+    name = "Github"
+    url = "https://github.com/CoderParth"
+    weight = 10

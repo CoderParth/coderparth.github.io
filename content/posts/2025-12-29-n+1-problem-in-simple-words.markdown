@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "N+1 Problem in Simple Words"
-date:   2025-12-29
+date: 2025-12-29
 ---
 
 In simple words, the **N+1 query problem** is a situation where too many queries are being performed, and which could have been solved by making a **single query**. 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "An Intro to C#"
-date:   2026-6-28
+date: 2026-06-28
 ---
 `NOTE: Everything is written in simple and short words — like a student's notes.`
 
