@@ -7,7 +7,8 @@ date: 2025-12-25
 Below you will find a quick, and short cheatsheet, written with simple examples, and easy to understand words.  
 
 ### Declaring variables of different types:  
-{% highlight go %}
+```go
+
 var i int
 var s string
 var b byte
@@ -16,23 +17,23 @@ var ch rune         // Go's equivalent of a single character.
 var sSlice []string // This creates a slice of strings.
 var sArr [3]string  // This creates an array with a length of 3 strings.
 var mp map[string]int // Creates a map with string type as key, and int type as value.
-{% endhighlight %}
+```
 
 **Note:** For the map declared above, when doing write operations, Go panics: `panic: assignment to entry in nil map`. So an initialization is required before the first write.
 
 Either `mp = map[string]int{}` or `mp = make(map[string]int)` will work.
 
 #### Constants  
-{% highlight go %}
+```go
 const n = 20 // Go supports untyped constants.
 const num int = 5
 const str string = "const"
 const st = "this is a string"
-{% endhighlight %}
+```
 
 #### Declaration/Initialisations that are only valid inside a function.  
 
-{% highlight go %}
+```go
 func declare() { // All functions start with "func" keyword.
 	str := "" // This way of initialization is only valid inside a function.
 	num := 3
@@ -41,14 +42,14 @@ func declare() { // All functions start with "func" keyword.
 	s := []string{}             // creates a slice of string type.
 	hashMap := map[string]int{} // Creates a map of string as key, and int as value.
 }
-{% endhighlight %}
+```
 
 **Note:**  In Golang, all declared variables must be used, else compiler will throw an error.  
 Example of the error: `declared and not used: str`
 
 ### Functions  
 In Golang, functions are declared using the `func` keyword. Below `a` and `b` are parameters with an `int` type.
-{% highlight go %}
+```go
 func add(a int, b int) int { // int indicates the type of the return value.
 	// function parameters of the same type can also be written like this:
 	// func add(a , b int) int {
@@ -58,7 +59,7 @@ func add(a int, b int) int { // int indicates the type of the return value.
 func nums() (int, int) { // A way to indicate multiple return values/types.
 	return 3, 4
 }
-{% endhighlight %}
+```
 
 **NOTE:** Function names that start with lowercase (example: func add()) act like private methods of a package. And function names that start with an uppercase (example: func Add()) act like public methods, and are automatically exported.
 
@@ -66,7 +67,7 @@ func nums() (int, int) { // A way to indicate multiple return values/types.
 Variadic functions can accept a variable number of arguments.
 In Go, three dots(...) followed by a type, is used as a parameter to signify a variadic function.
 
-{% highlight go %}
+```go
 func variadic(nums ...int) {
 	sum := 0
 	for _, n := range nums {
@@ -77,23 +78,23 @@ func variadic(nums ...int) {
 
 variadic(3, 4, 5)
 variadic(1,2)
-{% endhighlight %}
+```
 
 ### Defer  
 An important concept/keyword to understand when learning functions in golang is the concept of "defer".
 `defer` works quite similar to what it means: it puts off an event to a later time.
 `defer` runs just before the function returns.
 
-{% highlight go %}
+```go
 func deferExample() {
 	defer fmt.Println("print this later") // prints this later, when the function is about to return.  
 	fmt.Println("print this now")         // prints this first.
 }
-{% endhighlight %}
+```
 
 ### Slice methods  
 
-{% highlight go %}
+```go
 func sliceMethods() {
  	arr := []int{1, 2, 3, 4}
  	arr = append(arr, 5) // appending to a slice
@@ -104,11 +105,11 @@ func sliceMethods() {
  	newSlice := arr[0:2]    // Here, 0 is start index, 2 is end index. Value at 2nd index is not included.
  	length := len(newSlice) // len() gives the length of the slice.
 }
-{% endhighlight %}
+```
 
 ### Map methods  
 
-{% highlight go %}
+```go
 func mapMethods() {
  	mp := map[string]int{}
  	mp["a"] = 1               // set a key/value
@@ -119,11 +120,11 @@ func mapMethods() {
  	clear(mp)         // deletes all entries from the map.
  	length := len(mp) // Total number of entries in the map.
 }
-{% endhighlight %}
+```
 
 ### Loops  
 In Golang, loops are done using the `for` and `range` keyword
-{% highlight go %}
+```go
 func loops() {
 	for i := 0; i < 5; i++ {
 		// do something
@@ -156,12 +157,12 @@ func loops() {
 		// k: key, v: value
 	}
 }
-{% endhighlight %}
+```
 
 ### Conditionals: 
 #### if/else statements
 
-{% highlight go %}
+```go
 func conditionals() {
 	a := 0
 	b := 1
@@ -173,11 +174,11 @@ func conditionals() {
 		// do something
 	}
 }
-{% endhighlight %}
+```
 
 #### Switch/case  
 
-{% highlight go %}
+```go
 func cases() {
 	a := 5
 	switch a {
@@ -189,11 +190,11 @@ func cases() {
 	// by default do this, if other cases do not match.
 	}
 }
-{% endhighlight %}
+```
 
 ### Pointers and references
 
-{% highlight go %}
+```go
 func pointer() {
 	num := 4
 	p := &num
@@ -234,12 +235,12 @@ func tryChangingArrWithoutPointer(arr []int) {
 func tryChangingArrWithPointer(arr *[]int) {
 	*arr = append(*arr, 3) // append is used this way in golang.
 }
-{% endhighlight %}
+```
 
 ### Struct  
 Struct, in easy words, is a way to create your own type with multiple fields.
 
-{% highlight go %}
+```go
 
 type Card struct {
 	Name   string
@@ -260,7 +261,7 @@ func (c *Card) Add() {
 
 // This can be called like this:
 c.Add() // Calls Add method on the card created above.
-{% endhighlight %}
+```
 
 ### Interface
 In simple words, an interface is a contract that says: any type that has these methods automatically satifies this interface type.
@@ -268,7 +269,7 @@ In golang, there is no explicit declaration for interfaces.
 
 Below is a simple "Animal" example to showcase interface:
 
-{% highlight go %}
+```go
 type Animal interface {
 	Speak()
 }
@@ -302,13 +303,13 @@ func main() {
 		a.Speak()
 	}
 }
-{% endhighlight %}
+```
 
 ### Generics  
 Generics allows you to write functions or data structures that work with any data type. 
 
 Simple example:
-{% highlight go %}
+```go
 func printSlice[T any](s []T) {
 	for _, v := range s {
 		fmt.Println(v)
@@ -321,13 +322,13 @@ printSlice(nums)
 
 s := []string{"a", "b", "c"}
 printSlice(s)
-{% endhighlight %}
+```
 
 
 ### Concurrency/Goroutines:
 `Goroutines` are a way to handle concurrent tasks in Go. It allows multiple tasks to be executed at the same time without blocking each other. 
 
-{% highlight go %}
+```go
 func add() {
 	time.Sleep(2 * time.Second)
 	fmt.Println("Adding completed")
@@ -342,14 +343,14 @@ go add()
 go subs()
 fmt.Println("I could be doing something else while my goroutines are executing concurrently")
 time.Sleep(3 * time.Second) // This is to not let the main function return immediately. 
-{% endhighlight %}
+```
 **NOTE:** In a real case, if the above code did not have `time.Sleep(3 * time.Second)` on the last line, the main function would return immediately after printing the last line, 
 instead of waiting for all the goroutines to finish. To deal with this, either channels, or a sync package is generally used in real case scenarios. 
 
 #### Channels  
 In easy to understand words, a channel is like a pipe through which multiple goroutines can share data, without worrying about mutex locks, or deadlocks. 
 
-{% highlight go %}
+```go
 func main() {
 	ch := make(chan int, 2) // Makes a channel of buffer length 2, that can hold data of type int.
 	// ch := make(chan int) // You could write this too. This would create a channel without any specific length/size.  
@@ -367,7 +368,7 @@ func add(a, b int, ch chan int) {
 	time.Sleep(2 * time.Second)
 	ch <- a + b // send the value to the channel
 }
-{% endhighlight %}
+```
 
 ### Mutex  
 
@@ -381,7 +382,7 @@ This is a way in Go to avoid deadlocks, and race conditions.
 
 A simple example is shown below:
 
-{% highlight go %}
+```go
 import (
 	"fmt"
 	"sync"
@@ -420,4 +421,4 @@ func add(a, b int, r *Res, wg *sync.WaitGroup) {
 	r.values = append(r.values, sum)
 	r.mu.Unlock() // Unlock this resource.
 }
-{% endhighlight %}
+```
