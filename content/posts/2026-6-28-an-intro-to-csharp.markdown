@@ -191,21 +191,19 @@ class FinanceOptions
 ```
 
 ```
-// Encapsulation: 
-// In C#, usually "private" keyword and properties are used to achieve 
-// encapsulation — encapsulation means hiding sensitive data from the users, 
-// and protecting the integrity of an object's internal state.  
+A note on access modifiers:
+public: code is accessible for all classes
+private: code is only accessible within the same class  —  not accessible from an instance.
+protected: code is only accessible within the same class, or in a class that inherits this class. 
+internal: code is accessible within its own assembly (project). 
+	     field with "internal" can be used throughout this project, even though they maybe of different namespaces.  
+	     Example: If you have install a package which has internal field, you cannot access that field from your project. 
+static: code belongs to the class itself, and not an instance.  
 
-
-
-// A note on access modifiers:
-// public: code is accessible for all classes
-// private: code is only accessible within the same class  —  not accessible from an instance.
-// protected: code is only accessible within the same class, or in a class that inherits this class. 
-// internal: code is accessible within its own assembly (project). 
-// 	     field with "internal" can be used throughout this project, even though they maybe of different namespaces.  
-// 	     Example: If you have install a package which has internal field, you cannot access that field from your project. 
-// static: code belongs to the class itself, and not an instance.  
+Encapsulation: 
+In C#, usually "private" keyword and properties are used to achieve 
+encapsulation — encapsulation means hiding sensitive data from the users, 
+and protecting the integrity of an object's internal state.  
 ```
 
 ## C# Naming Conventions:
