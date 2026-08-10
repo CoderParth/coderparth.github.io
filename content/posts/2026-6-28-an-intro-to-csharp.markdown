@@ -190,8 +190,8 @@ class FinanceOptions
 
 ```
 
+## A note on access modifiers:
 ```
-A note on access modifiers:
 public: code is accessible for all classes
 private: code is only accessible within the same class  —  not accessible from an instance.
 protected: code is only accessible within the same class, or in a class that inherits this class. 
